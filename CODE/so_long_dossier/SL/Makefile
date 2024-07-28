@@ -22,6 +22,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@make -C $(LIBFT_PATH) > /dev/null 2>&1
+	@make -C $(MLX_PATH) > /dev/NULL 2>&1
 	@$(CC) $(OBJS) -o $(NAME) $(CFLAGS) $(LIBFT) $(MLX) > /dev/null 2>&1
 
 @$(OBJS): %.o : %.c
