@@ -1,7 +1,6 @@
 NAME = so_long
 CC = gcc
-CFLAGS = -Wall -g3 -fsanitize=address -Wextra  -I./lib/mlx_LINUX -I./lib/libft -Werror
-# CFLAGS = -Wall -Wextra  -I./lib/mlx_LINUX -I./lib/libft -Werror
+CFLAGS = -Wall -Wextra -Werror -I./lib/mlx_LINUX -I./lib/libft
 LIBFT_PATH = ./lib/libft
 MLX_PATH = ./lib/mlx_LINUX -lmlx
 LIBFT = -L$(LIBFT_PATH) -lft
@@ -37,7 +36,3 @@ fclean: clean
 	@rm -f $(NAME) > /dev/null 2>&1
 
 re: fclean all
-
-#macOS	gcc $(OBJS) -o so_long -lmlx -framework OpenGL -framework AppKit
-
-
